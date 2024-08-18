@@ -72,7 +72,7 @@ fb_random64(uint64_t *randp, uint64_t max, uint64_t round, avd_t avd)
 	 */
 	max = max - round;
 
-	random_normalized = (double)random / UINT64_MAX;
+	random_normalized = (double)random / (double)UINT64_MAX;
 	random = random_normalized * max;
 
 	if (round) {
